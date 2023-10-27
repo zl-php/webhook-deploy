@@ -1,0 +1,26 @@
+{
+    "name": "zuogechengxu/webhook-deploy",
+    "description": "Laravel Webhook Deploy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhoulei",
+            "email": "lei_0668@sina.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zuogechengxu\\Webhook\\Deploy": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zuogechengxu\\Webhook\\Deploy\\WebhookDeployServiceProvider"
+            ]
+        }
+    }
+}
