@@ -1,18 +1,20 @@
-Laravel log viewer
+Laravel webhook deploy
 ==================
 
-## Install (Laravel)
+## Install
 Install via composer
 ```bash
-composer require rap2hpoutre/laravel-log-viewer
+composer require xxxx  #暂未发布
 ```
 
-Add Service Provider to `config/app.php` in `providers` section
+发布配置
 ```php
-Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+php artisan vendor:publish --provider="Zuogechengxu\Webhook\Deploy\WebhookDeployServiceProvider"
 ```
 
-Add a route in your web routes file:
+添加路由
 ```php 
-Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+use Zuogechengxu\Webhook\Deploy\Controllers\WebhookDeployController;
+
+Route::post('deploy', [WebhookDeployController::class, 'deploy']);
 ```
